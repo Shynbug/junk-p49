@@ -1,11 +1,10 @@
-const express = require("express");
+// routes/auth.js (or test.js or payment.js)
+const express = require('express');
 const router = express.Router();
 
-router.post("/submit", (req, res) => {
-  const { userId, answers } = req.body;
-  // Save to DB (pseudo)
-  console.log("Received answers:", answers);
-  res.json({ message: "Answers received." });
+// Define routes
+router.get('/', (req, res) => {
+  res.send('This is the test route');
 });
 
-module.exports = router;
+module.exports = router; // ✅ Export the router
